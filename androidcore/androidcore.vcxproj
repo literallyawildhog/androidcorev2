@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|ARM64">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM64">
+      <Configuration>Release</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x86">
+      <Configuration>Debug</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x86">
+      <Configuration>Release</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{6076c168-5f7d-43f8-8b0b-75f938f8339a}</ProjectGuid>
+    <Keyword>Android</Keyword>
+    <RootNamespace>androidcore</RootNamespace>
+    <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
+    <ApplicationType>Android</ApplicationType>
+    <ApplicationTypeRevision>3.0</ApplicationTypeRevision>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>Clang_5_0</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>Clang_5_0</PlatformToolset>
+    <AndroidAPILevel>android-23</AndroidAPILevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>Clang_5_0</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>Clang_5_0</PlatformToolset>
+    <AndroidAPILevel>android-24</AndroidAPILevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>Clang_5_0</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>Clang_5_0</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>Clang_5_0</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>Clang_5_0</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
+    <TargetName>libandroidcore</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(ProjectDir)thirdparty-includes\ghc;$(ProjectDir)thirdparty-includes\luau\Ast\include\Luau;$(ProjectDir)thirdparty-includes\luau\Ast\src;C:\Users\Nathaniel\source\repos\androidcorev2\androidcore\thirdparty-includes\luau\Ast\include;$(ProjectDir)thirdparty-includes\luau\Ast;$(ProjectDir)thirdparty-includes\luau\Common;$(ProjectDir)thirdparty-includes\luau\Common\include;$(ProjectDir)thirdparty-includes\luau\Common\include\Luau;$(ProjectDir)thirdparty-includes\luau\Compiler\include\Luau;$(ProjectDir)thirdparty-includes\luau\Compiler\include;$(ProjectDir)thirdparty-includes\luau\Compiler\src;$(ProjectDir)thirdparty-includes\luau\Compiler;$(ProjectDir)thirdparty-includes\luau\VM\include;$(ProjectDir)thirdparty-includes\luau\VM\src;$(ProjectDir)thirdparty-includes\luau\VM;$(ProjectDir)thirdparty-includes\luau;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CppLanguageStandard>gnu++1z</CppLanguageStandard>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <ExceptionHandling>Enabled</ExceptionHandling>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+      <AdditionalOptions>-lm %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(ProjectDir)thirdparty-includes\ghc;$(ProjectDir)thirdparty-includes\luau\Ast\include\Luau;$(ProjectDir)thirdparty-includes\luau\Ast\src;C:\Users\Nathaniel\source\repos\androidcorev2\androidcore\thirdparty-includes\luau\Ast\include;$(ProjectDir)thirdparty-includes\luau\Ast;$(ProjectDir)thirdparty-includes\luau\Common;$(ProjectDir)thirdparty-includes\luau\Common\include;$(ProjectDir)thirdparty-includes\luau\Common\include\Luau;$(ProjectDir)thirdparty-includes\luau\Compiler\include\Luau;$(ProjectDir)thirdparty-includes\luau\Compiler\include;$(ProjectDir)thirdparty-includes\luau\Compiler\src;$(ProjectDir)thirdparty-includes\luau\Compiler;$(ProjectDir)thirdparty-includes\luau\VM\include;$(ProjectDir)thirdparty-includes\luau\VM\src;$(ProjectDir)thirdparty-includes\luau\VM;$(ProjectDir)thirdparty-includes\luau;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CppLanguageStandard>gnu++1z</CppLanguageStandard>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <ExceptionHandling>Enabled</ExceptionHandling>
+      <DataLevelLinking>false</DataLevelLinking>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+      <AdditionalOptions>-lm %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="closures\closures.cpp" />
+    <ClCompile Include="memory\memory.cpp" />
+    <ClCompile Include="nativeloader.cpp" />
+    <ClCompile Include="rbx\environment\environment.cpp" />
+    <ClCompile Include="rbx\environment\libraries\depend.cpp" />
+    <ClCompile Include="rbx\execution\script_execution.cpp" />
+    <ClCompile Include="rbx\filesystem\filesystem.cpp" />
+    <ClCompile Include="rbx\globals\globalsfuncs.cpp" />
+    <ClCompile Include="rbx\libraries.cpp" />
+    <ClCompile Include="rbx\module.cpp" />
+    <ClCompile Include="thirdparty-includes\luau\Ast\src\Ast.cpp" />
+    <ClCompile Include="thirdparty-includes\luau\Ast\src\Confusables.cpp" />
+    <ClCompile Include="thirdparty-includes\luau\Ast\src\Lexer.cpp" />
+    <ClCompile Include="thirdparty-includes\luau\Ast\src\Location.cpp" />
+    <ClCompile Include="thirdparty-includes\luau\Ast\src\Parser.cpp" />
+    <ClCompile Include="thirdparty-includes\luau\Ast\src\StringUtils.cpp" />
+    <ClCompile Include="thirdparty-includes\luau\Ast\src\TimeTrace.cpp" />
+    <ClCompile Include="thirdparty-includes\luau\Compiler\src\BuiltinFolding.cpp" />
+    <ClCompile Include="thirdparty-includes\luau\Compiler\src\Builtins.cpp" />
+    <ClCompile Include="thirdparty-includes\luau\Compiler\src\BytecodeBuilder.cpp" />
+    <ClCompile Include="thirdparty-includes\luau\Compiler\src\Compiler.cpp" />
+    <ClCompile Include="thirdparty-includes\luau\Compiler\src\ConstantFolding.cpp" />
+    <ClCompile Include="thirdparty-includes\luau\Compiler\src\CostModel.cpp" />
+    <ClCompile Include="thirdparty-includes\luau\Compiler\src\lcode.cpp" />
+    <ClCompile Include="thirdparty-includes\luau\Compiler\src\TableShape.cpp" />
+    <ClCompile Include="thirdparty-includes\luau\Compiler\src\Types.cpp" />
+    <ClCompile Include="thirdparty-includes\luau\Compiler\src\ValueTracking.cpp" />
+    <ClCompile Include="thirdparty-includes\luau\VM\src\lapi.cpp" />
+    <ClCompile Include="thirdparty-includes\luau\VM\src\laux.cpp" />
+    <ClCompile Include="thirdparty-includes\luau\VM\src\lbaselib.cpp" />
+    <ClCompile Include="thirdparty-includes\luau\VM\src\lbitlib.cpp" />
+    <ClCompile Include="thirdparty-includes\luau\VM\src\lbuffer.cpp" />
+    <ClCompile Include="thirdparty-includes\luau\VM\src\lbuflib.cpp" />
+    <ClCompile Include="thirdparty-includes\luau\VM\src\lbuiltins.cpp" />
+    <ClCompile Include="thirdparty-includes\luau\VM\src\lcorolib.cpp" />
+    <ClCompile Include="thirdparty-includes\luau\VM\src\ldblib.cpp" />
+    <ClCompile Include="thirdparty-includes\luau\VM\src\ldebug.cpp" />
+    <ClCompile Include="thirdparty-includes\luau\VM\src\ldo.cpp" />
+    <ClCompile Include="thirdparty-includes\luau\VM\src\lfunc.cpp" />
+    <ClCompile Include="thirdparty-includes\luau\VM\src\lgc.cpp" />
+    <ClCompile Include="thirdparty-includes\luau\VM\src\lgcdebug.cpp" />
+    <ClCompile Include="thirdparty-includes\luau\VM\src\linit.cpp" />
+    <ClCompile Include="thirdparty-includes\luau\VM\src\lmathlib.cpp" />
+    <ClCompile Include="thirdparty-includes\luau\VM\src\lmem.cpp" />
+    <ClCompile Include="thirdparty-includes\luau\VM\src\lnumprint.cpp" />
+    <ClCompile Include="thirdparty-includes\luau\VM\src\lobject.cpp" />
+    <ClCompile Include="thirdparty-includes\luau\VM\src\loslib.cpp" />
+    <ClCompile Include="thirdparty-includes\luau\VM\src\lperf.cpp" />
+    <ClCompile Include="thirdparty-includes\luau\VM\src\lstate.cpp" />
+    <ClCompile Include="thirdparty-includes\luau\VM\src\lstring.cpp" />
+    <ClCompile Include="thirdparty-includes\luau\VM\src\lstrlib.cpp" />
+    <ClCompile Include="thirdparty-includes\luau\VM\src\ltable.cpp" />
+    <ClCompile Include="thirdparty-includes\luau\VM\src\ltablib.cpp" />
+    <ClCompile Include="thirdparty-includes\luau\VM\src\ltm.cpp" />
+    <ClCompile Include="thirdparty-includes\luau\VM\src\ludata.cpp" />
+    <ClCompile Include="thirdparty-includes\luau\VM\src\lutf8lib.cpp" />
+    <ClCompile Include="thirdparty-includes\luau\VM\src\lvmexecute.cpp" />
+    <ClCompile Include="thirdparty-includes\luau\VM\src\lvmload.cpp" />
+    <ClCompile Include="thirdparty-includes\luau\VM\src\lvmutils.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\Desktop\FrostWareVM\FrostAndroid\luau\Ast\include\Luau\Ast.h" />
+    <ClInclude Include="closures\closures.hpp" />
+    <ClInclude Include="logs.h" />
+    <ClInclude Include="memory\memory.hpp" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="rbx\environment\environment.hpp" />
+    <ClInclude Include="rbx\execution\script_execution.hpp" />
+    <ClInclude Include="rbx\filesystem\filesystem.hpp" />
+    <ClInclude Include="rbx\globals\globals.hpp" />
+    <ClInclude Include="rbx\globals\globalsfuncs.hpp" />
+    <ClInclude Include="rbx\libraries.hpp" />
+    <ClInclude Include="rbx\module.hpp" />
+    <ClInclude Include="rbx\scripts\luaui.hpp" />
+    <ClInclude Include="thirdparty-includes\ghc\filesystem.hpp" />
+    <ClInclude Include="thirdparty-includes\ghc\fs_fwd.hpp" />
+    <ClInclude Include="thirdparty-includes\ghc\fs_impl.hpp" />
+    <ClInclude Include="thirdparty-includes\ghc\fs_std.hpp" />
+    <ClInclude Include="thirdparty-includes\ghc\fs_std_fwd.hpp" />
+    <ClInclude Include="thirdparty-includes\ghc\fs_std_impl.hpp" />
+    <ClInclude Include="thirdparty-includes\luau\Ast\include\Luau\Confusables.h" />
+    <ClInclude Include="thirdparty-includes\luau\Ast\include\Luau\Lexer.h" />
+    <ClInclude Include="thirdparty-includes\luau\Ast\include\Luau\Location.h" />
+    <ClInclude Include="thirdparty-includes\luau\Ast\include\Luau\ParseOptions.h" />
+    <ClInclude Include="thirdparty-includes\luau\Ast\include\Luau\Parser.h" />
+    <ClInclude Include="thirdparty-includes\luau\Ast\include\Luau\ParseResult.h" />
+    <ClInclude Include="thirdparty-includes\luau\Ast\include\Luau\StringUtils.h" />
+    <ClInclude Include="thirdparty-includes\luau\Ast\include\Luau\TimeTrace.h" />
+    <ClInclude Include="thirdparty-includes\luau\Common\include\Luau\Bytecode.h" />
+    <ClInclude Include="thirdparty-includes\luau\Common\include\Luau\BytecodeUtils.h" />
+    <ClInclude Include="thirdparty-includes\luau\Common\include\Luau\Common.h" />
+    <ClInclude Include="thirdparty-includes\luau\Common\include\Luau\DenseHash.h" />
+    <ClInclude Include="thirdparty-includes\luau\Common\include\Luau\ExperimentalFlags.h" />
+    <ClInclude Include="thirdparty-includes\luau\Common\include\Luau\Variant.h" />
+    <ClInclude Include="thirdparty-includes\luau\Common\include\Luau\VecDeque.h" />
+    <ClInclude Include="thirdparty-includes\luau\Compiler\include\luacode.h" />
+    <ClInclude Include="thirdparty-includes\luau\Compiler\include\Luau\BytecodeBuilder.h" />
+    <ClInclude Include="thirdparty-includes\luau\Compiler\include\Luau\Compiler.h" />
+    <ClInclude Include="thirdparty-includes\luau\Compiler\src\BuiltinFolding.h" />
+    <ClInclude Include="thirdparty-includes\luau\Compiler\src\Builtins.h" />
+    <ClInclude Include="thirdparty-includes\luau\Compiler\src\ConstantFolding.h" />
+    <ClInclude Include="thirdparty-includes\luau\Compiler\src\CostModel.h" />
+    <ClInclude Include="thirdparty-includes\luau\Compiler\src\TableShape.h" />
+    <ClInclude Include="thirdparty-includes\luau\Compiler\src\Types.h" />
+    <ClInclude Include="thirdparty-includes\luau\Compiler\src\ValueTracking.h" />
+    <ClInclude Include="thirdparty-includes\luau\VM\include\lua.h" />
+    <ClInclude Include="thirdparty-includes\luau\VM\include\luaconf.h" />
+    <ClInclude Include="thirdparty-includes\luau\VM\include\lualib.h" />
+    <ClInclude Include="thirdparty-includes\luau\VM\src\lapi.h" />
+    <ClInclude Include="thirdparty-includes\luau\VM\src\lbuffer.h" />
+    <ClInclude Include="thirdparty-includes\luau\VM\src\lbuiltins.h" />
+    <ClInclude Include="thirdparty-includes\luau\VM\src\lbytecode.h" />
+    <ClInclude Include="thirdparty-includes\luau\VM\src\lcommon.h" />
+    <ClInclude Include="thirdparty-includes\luau\VM\src\ldebug.h" />
+    <ClInclude Include="thirdparty-includes\luau\VM\src\ldo.h" />
+    <ClInclude Include="thirdparty-includes\luau\VM\src\lfunc.h" />
+    <ClInclude Include="thirdparty-includes\luau\VM\src\lgc.h" />
+    <ClInclude Include="thirdparty-includes\luau\VM\src\lmem.h" />
+    <ClInclude Include="thirdparty-includes\luau\VM\src\lnumutils.h" />
+    <ClInclude Include="thirdparty-includes\luau\VM\src\lobject.h" />
+    <ClInclude Include="thirdparty-includes\luau\VM\src\lstate.h" />
+    <ClInclude Include="thirdparty-includes\luau\VM\src\lstring.h" />
+    <ClInclude Include="thirdparty-includes\luau\VM\src\ltable.h" />
+    <ClInclude Include="thirdparty-includes\luau\VM\src\ltm.h" />
+    <ClInclude Include="thirdparty-includes\luau\VM\src\ludata.h" />
+    <ClInclude Include="thirdparty-includes\luau\VM\src\lvm.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="rbx\environment\libraries\registry.hpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>
