@@ -179,7 +179,11 @@
     <ClCompile Include="memory\memory.cpp" />
     <ClCompile Include="nativeloader.cpp" />
     <ClCompile Include="rbx\environment\environment.cpp" />
-    <ClCompile Include="rbx\environment\libraries\depend.cpp" />
+    <ClCompile Include="rbx\environment\libraries\global_env.cpp" />
+    <ClCompile Include="rbx\environment\libraries\identity.cpp" />
+    <ClCompile Include="rbx\environment\libraries\metatable_management.cpp" />
+    <ClCompile Include="rbx\environment\libraries\network_functions.cpp" />
+    <ClCompile Include="rbx\environment\libraries\thread_management.cpp" />
     <ClCompile Include="rbx\execution\script_execution.cpp" />
     <ClCompile Include="rbx\filesystem\filesystem.cpp" />
     <ClCompile Include="rbx\globals\globalsfuncs.cpp" />

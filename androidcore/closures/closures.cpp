@@ -6,63 +6,61 @@
 #include <lfunc.h>
 #include <lualib.h>
 
-auto cclosures::pushcclosure(lua_State* ls, lua_CFunction f, const char* name, int nups, lua_Continuation k) -> void
-{
-    lua_pushcclosurek(ls, f, name, nups, k);
-    const auto cl = clvalue(luaA_toobject(ls, -1));
+namespace cclosures {
 
-    markcclosure(cl);
-}
+    static void recursivelymarkproto(Proto* proto) {
+        if (!proto) return;
 
-auto mark_protos(Proto* p) -> void
-{
-    p->linedefined = cclosures::marked_proto;
+        proto->linedefined = marked_proto;
 
-    for (auto i = 0; i < p->sizep; i++)
-    {
-        mark_protos(p->p[i]);
+        for (int i = 0; i < proto->sizep; ++i) {
+            recursivelymarkproto(proto->p[i]);
+        }
     }
-}
 
-auto cclosures::markcclosure(Closure* cl) -> void
-{
-    if (cl->isC)
-    {
-        cl->isC = marked_c_closure;
+    // Mark a Lua closure based on its type (C or Lua)
+    static void markcclosure(Closure* closure) {
+        if (!closure) return;
+
+        if (closure->isC) {
+            // Mark the closure as a C closure
+            closure->isC = marked_c_closure;
+        }
+        else {
+            // Recursively mark Lua prototypes
+            recursivelymarkproto(closure->l.p);
+        }
     }
-    else
-    {
-        const auto p = cl->l.p;
 
-        mark_protos(p);
+    // Pushes a C closure onto the Lua stack and marks it for identification
+    void pushcclosure(lua_State* L, lua_CFunction fn, const char* name, int num_upvalues, lua_Continuation k) {
+        lua_pushcclosurek(L, fn, name, num_upvalues, k);
+        Closure* closure = clvalue(luaA_toobject(L, -1));
+
+        if (closure) {
+            markcclosure(closure);
+        }
     }
-}
 
-auto cclosures::getcclosuretype(Closure* cl) -> types
-{
-    if (cl->isC)
-    {
-        if (cl->isC == marked_c_closure)
-        {
-            return marked_c_closure;
+    // Determine the type of the closure, whether it's a marked C closure, a Lua closure, or something else
+    types getcclosuretype(Closure* closure) {
+        if (!closure) return unidentified;
+
+        if (closure->isC) {
+            switch (closure->isC) {
+            case marked_c_closure:
+                return marked_c_closure;
+            case wrapped_l_closure:
+                return wrapped_l_closure;
+            default:
+                return c_closure;
+            }
+        }
+        else {
+            // Check if the Lua closure's prototype has been marked
+            return (closure->l.p->linedefined == marked_proto) ? marked_proto : l_closure;
         }
 
-        if (cl->isC == wrapped_l_closure)
-        {
-            return wrapped_l_closure;
-        }
-
-        return c_closure;
+        return unidentified;
     }
-    else if (!cl->isC)
-    {
-        if (cl->l.p->linedefined == marked_proto)
-        {
-            return marked_proto;
-        }
-
-        return l_closure;
-    }
-
-    return unidentified;
 }

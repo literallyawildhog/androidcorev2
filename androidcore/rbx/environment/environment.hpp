@@ -5,6 +5,7 @@
 #include <functional>
 #include <variant>
 #include "../../closures/closures.hpp"
+#include "libraries/registry.hpp"
 #include <list>
 
 namespace globals::environment {
@@ -56,6 +57,4 @@ namespace globals::environment {
 
         if (was_readonly) lua_setreadonly(ls, -1, true);
     }
-
-    auto xpush_any(lua_State* from, lua_State* to, int from_idx) -> void;
 }

@@ -11,23 +11,25 @@
 #include "execution/script_execution.hpp"
 
 namespace globals {
-	class libraries {
-	private:
-		lua_State* aL;
-		lua_State* rL;
-		int rL_ref;
 
-		int64_t rL_u;
+    class libraries {
+    private:
+        lua_State* aL = nullptr;
+        lua_State* rL = nullptr;
+        int rL_ref = LUA_NOREF; 
 
-		bool isactive;
-	public:
-		auto getactive() -> bool { return this->isactive; }
+        int64_t rL_u = 0;  
+        bool isactive = false;
 
-		auto get_aL_state() -> lua_State* { return this->aL; }
-		auto get_rL_state() -> lua_State* { return this->rL; }
-		auto get_rL_state_u() -> int64_t { return this->rL_u; }
+    public:
+        auto getactive() const -> bool { return isactive; }
 
-		auto initiate(std::int64_t scriptcontext) -> void;
-		auto exit() -> void;
-	};
+        auto get_aL_state() const -> lua_State* { return aL; }
+        auto get_rL_state() const -> lua_State* { return rL; }
+        auto get_rL_state_u() const -> int64_t { return rL_u; }
+
+        auto initiate(std::int64_t scriptcontext) -> void;
+        auto exit() -> void;
+    };
+
 }

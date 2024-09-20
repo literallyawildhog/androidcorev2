@@ -9,54 +9,49 @@
 #include <lstate.h>
 #include <lualib.h>
 
-auto globals::libraries::initiate(std::int64_t scriptcontext) -> void
-{
+auto globals::libraries::initiate(std::int64_t scriptcontext) -> void {
     CALLLOG();
 
-    this->aL = globals::funcs::decryptrbxstate(scriptcontext);
+    aL = globals::funcs::decryptrbxstate(scriptcontext);
     if (!aL) {
-        LOGE("Failed to decrypt rbx state");
-        exit();
-        return;
+        LOGE("Failed to decrypt Roblox state");
+        std::exit(EXIT_FAILURE); // Use std::exit for clarity
     }
 
-    LOGI("aL is %p", aL);
+    LOGI("Lua state (aL) initialized at %p", aL);
 
-    for (Luau::FValue<bool>* flag = Luau::FValue<bool>::list; flag; flag = flag->next)
-    {
-        if (strncmp(flag->name, "Luau", 4) == 0)
-        {
-            LOGW("Luau flag is %s", flag->name);
+    // Activate Luau flags
+    for (auto* flag = Luau::FValue<bool>::list; flag; flag = flag->next) {
+        if (strncmp(flag->name, "Luau", 4) == 0) {
+            LOGW("Activating Luau flag: %s", flag->name);
             flag->value = true;
         }
     }
 
-    this->rL = lua_newthread(aL);
-   // this->rL_ref = main; UNUSED
+    rL = lua_newthread(aL); // Create a new Lua thread
+    luaL_sandboxthread(rL);  // Sandbox the thread
 
-    luaL_sandboxthread(sandbox);
+    // Set up global tables
+    lua_newtable(rL);
+    lua_setglobal(rL, "_G");
+    lua_newtable(rL);
+    lua_setglobal(rL, "shared");
 
-    lua_newtable(sandbox);
-    lua_setglobal(sandbox, "_G");
-
-    lua_newtable(sandbox);
-    lua_setglobal(sandbox, "shared");
-
-    script::exec::get_singleton()->execute(luaui);
+    // Execute the Lua UI script
+    auto* schedule = script::exec::get_singleton();
+    schedule->execute(luaui);
 
     isactive = true;
     LOGI("Exploit environment started!");
 }
 
-auto globals::libraries::exit() -> void
-{
+auto globals::libraries::exit() -> void {
     CALLLOG();
 
-    this->aL = nullptr;
-    this->rL = nullptr;
-    this->rL_u = 0;
-    this->rL_u = 0;
-    this->isactive = false;
+    aL = nullptr;
+    rL = nullptr;
+    rL_u = 0;
+    isactive = false;
 
-    LOGD("Exploit environment killed!");
+    LOGD("Exploit environment exited and cleaned up!");
 }

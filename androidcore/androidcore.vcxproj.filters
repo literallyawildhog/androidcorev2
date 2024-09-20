@@ -59,7 +59,11 @@
     <ClCompile Include="rbx\environment\environment.cpp" />
     <ClCompile Include="rbx\filesystem\filesystem.cpp" />
     <ClCompile Include="rbx\libraries.cpp" />
-    <ClCompile Include="rbx\environment\libraries\depend.cpp" />
+    <ClCompile Include="rbx\environment\libraries\global_env.cpp" />
+    <ClCompile Include="rbx\environment\libraries\thread_management.cpp" />
+    <ClCompile Include="rbx\environment\libraries\identity.cpp" />
+    <ClCompile Include="rbx\environment\libraries\metatable_management.cpp" />
+    <ClCompile Include="rbx\environment\libraries\network_functions.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />

@@ -1,0 +1,154 @@
+﻿  ANDROID_HOME=C:\Program Files (x86)\Android\android-sdk
+  ANDROID_SDK_ROOT=C:\Program Files (x86)\Android\android-sdk
+  ANT_HOME=
+  JAVA_HOME=C:\Program Files\Android\jdk\jdk-8.0.302.8-hotspot
+  NDK_ROOT=D:\x68\Android\AndroidNDK\android-ndk-r23c
+  environment.cpp
+  In file included from rbx\environment\environment.cpp:2:
+  In file included from rbx\environment/libraries/../environment.hpp:8:
+  In file included from rbx\environment/libraries/registry.hpp:7:
+rbx\environment/libraries/thread_management.cpp(11,5): warning : data argument not used by format string [-Wformat-extra-args]
+      CALLLOG();
+      ^~~~~~~~~
+  C:\Users\Nathaniel\source\repos\androidcorev2\androidcore\thirdparty-includes\luau\Ast\../../../logs.h(12,36): note: expanded from macro 'CALLLOG'
+  #define CALLLOG( ) LOGD("Calling", __FILE__, __FUNCTION__)
+                          ~~~~~~~~~  ^
+  <scratch space>(320,1): note: expanded from here
+  "rbx\\environment/libraries/thread_management.cpp"
+  ^
+  C:\Users\Nathaniel\source\repos\androidcorev2\androidcore\thirdparty-includes\luau\Ast\../../../logs.h(7,70): note: expanded from macro 'LOGD'
+  #define LOGD(...) ((void)__android_log_print(ANDROID_LOG_DEBUG, TAG, __VA_ARGS__))
+                                                                       ^~~~~~~~~~~
+  In file included from rbx\environment\environment.cpp:2:
+  In file included from rbx\environment/libraries/../environment.hpp:8:
+  In file included from rbx\environment/libraries/registry.hpp:7:
+rbx\environment/libraries/thread_management.cpp(21,5): warning : data argument not used by format string [-Wformat-extra-args]
+      CALLLOG();
+      ^~~~~~~~~
+  C:\Users\Nathaniel\source\repos\androidcorev2\androidcore\thirdparty-includes\luau\Ast\../../../logs.h(12,36): note: expanded from macro 'CALLLOG'
+  #define CALLLOG( ) LOGD("Calling", __FILE__, __FUNCTION__)
+                          ~~~~~~~~~  ^
+  <scratch space>(321,1): note: expanded from here
+  "rbx\\environment/libraries/thread_management.cpp"
+  ^
+  C:\Users\Nathaniel\source\repos\androidcorev2\androidcore\thirdparty-includes\luau\Ast\../../../logs.h(7,70): note: expanded from macro 'LOGD'
+  #define LOGD(...) ((void)__android_log_print(ANDROID_LOG_DEBUG, TAG, __VA_ARGS__))
+                                                                       ^~~~~~~~~~~
+  In file included from rbx\environment\environment.cpp:2:
+  In file included from rbx\environment/libraries/../environment.hpp:8:
+  In file included from rbx\environment/libraries/registry.hpp:7:
+rbx\environment/libraries/thread_management.cpp(28,5): warning : data argument not used by format string [-Wformat-extra-args]
+      CALLLOG();
+      ^~~~~~~~~
+  C:\Users\Nathaniel\source\repos\androidcorev2\androidcore\thirdparty-includes\luau\Ast\../../../logs.h(12,36): note: expanded from macro 'CALLLOG'
+  #define CALLLOG( ) LOGD("Calling", __FILE__, __FUNCTION__)
+                          ~~~~~~~~~  ^
+  <scratch space>(322,1): note: expanded from here
+  "rbx\\environment/libraries/thread_management.cpp"
+  ^
+  C:\Users\Nathaniel\source\repos\androidcorev2\androidcore\thirdparty-includes\luau\Ast\../../../logs.h(7,70): note: expanded from macro 'LOGD'
+  #define LOGD(...) ((void)__android_log_print(ANDROID_LOG_DEBUG, TAG, __VA_ARGS__))
+                                                                       ^~~~~~~~~~~
+  In file included from rbx\environment\environment.cpp:2:
+  In file included from rbx\environment/libraries/../environment.hpp:8:
+  In file included from rbx\environment/libraries/registry.hpp:7:
+rbx\environment/libraries/thread_management.cpp(29,16): warning : unused variable 'newthread' [-Wunused-variable]
+      lua_State* newthread = lua_newthread(ls);
+                 ^
+rbx\environment/libraries/thread_management.cpp(36,5): warning : data argument not used by format string [-Wformat-extra-args]
+      CALLLOG();
+      ^~~~~~~~~
+  C:\Users\Nathaniel\source\repos\androidcorev2\androidcore\thirdparty-includes\luau\Ast\../../../logs.h(12,36): note: expanded from macro 'CALLLOG'
+  #define CALLLOG( ) LOGD("Calling", __FILE__, __FUNCTION__)
+                          ~~~~~~~~~  ^
+  <scratch space>(323,1): note: expanded from here
+  "rbx\\environment/libraries/thread_management.cpp"
+  ^
+  C:\Users\Nathaniel\source\repos\androidcorev2\androidcore\thirdparty-includes\luau\Ast\../../../logs.h(7,70): note: expanded from macro 'LOGD'
+  #define LOGD(...) ((void)__android_log_print(ANDROID_LOG_DEBUG, TAG, __VA_ARGS__))
+                                                                       ^~~~~~~~~~~
+  In file included from rbx\environment\environment.cpp:2:
+  In file included from rbx\environment/libraries/../environment.hpp:8:
+  In file included from rbx\environment/libraries/registry.hpp:8:
+rbx\environment/libraries/identity.cpp(11,5): warning : data argument not used by format string [-Wformat-extra-args]
+      CALLLOG();
+      ^~~~~~~~~
+  C:\Users\Nathaniel\source\repos\androidcorev2\androidcore\thirdparty-includes\luau\Ast\../../../logs.h(12,36): note: expanded from macro 'CALLLOG'
+  #define CALLLOG( ) LOGD("Calling", __FILE__, __FUNCTION__)
+                          ~~~~~~~~~  ^
+  <scratch space>(324,1): note: expanded from here
+  "rbx\\environment/libraries/identity.cpp"
+  ^
+  C:\Users\Nathaniel\source\repos\androidcorev2\androidcore\thirdparty-includes\luau\Ast\../../../logs.h(7,70): note: expanded from macro 'LOGD'
+  #define LOGD(...) ((void)__android_log_print(ANDROID_LOG_DEBUG, TAG, __VA_ARGS__))
+                                                                       ^~~~~~~~~~~
+  In file included from rbx\environment\environment.cpp:2:
+  In file included from rbx\environment/libraries/../environment.hpp:8:
+  In file included from rbx\environment/libraries/registry.hpp:8:
+rbx\environment/libraries/identity.cpp(25,5): warning : data argument not used by format string [-Wformat-extra-args]
+      CALLLOG();
+      ^~~~~~~~~
+  C:\Users\Nathaniel\source\repos\androidcorev2\androidcore\thirdparty-includes\luau\Ast\../../../logs.h(12,36): note: expanded from macro 'CALLLOG'
+  #define CALLLOG( ) LOGD("Calling", __FILE__, __FUNCTION__)
+                          ~~~~~~~~~  ^
+  <scratch space>(325,1): note: expanded from here
+  "rbx\\environment/libraries/identity.cpp"
+  ^
+  C:\Users\Nathaniel\source\repos\androidcorev2\androidcore\thirdparty-includes\luau\Ast\../../../logs.h(7,70): note: expanded from macro 'LOGD'
+  #define LOGD(...) ((void)__android_log_print(ANDROID_LOG_DEBUG, TAG, __VA_ARGS__))
+                                                                       ^~~~~~~~~~~
+  In file included from rbx\environment\environment.cpp:2:
+  In file included from rbx\environment/libraries/../environment.hpp:8:
+  In file included from rbx\environment/libraries/registry.hpp:8:
+rbx\environment/libraries/identity.cpp(37,5): warning : data argument not used by format string [-Wformat-extra-args]
+      CALLLOG();
+      ^~~~~~~~~
+  C:\Users\Nathaniel\source\repos\androidcorev2\androidcore\thirdparty-includes\luau\Ast\../../../logs.h(12,36): note: expanded from macro 'CALLLOG'
+  #define CALLLOG( ) LOGD("Calling", __FILE__, __FUNCTION__)
+                          ~~~~~~~~~  ^
+  <scratch space>(326,1): note: expanded from here
+  "rbx\\environment/libraries/identity.cpp"
+  ^
+  C:\Users\Nathaniel\source\repos\androidcorev2\androidcore\thirdparty-includes\luau\Ast\../../../logs.h(7,70): note: expanded from macro 'LOGD'
+  #define LOGD(...) ((void)__android_log_print(ANDROID_LOG_DEBUG, TAG, __VA_ARGS__))
+                                                                       ^~~~~~~~~~~
+  In file included from rbx\environment\environment.cpp:2:
+  In file included from rbx\environment/libraries/../environment.hpp:8:
+  In file included from rbx\environment/libraries/registry.hpp:8:
+rbx\environment/libraries/identity.cpp(50,5): warning : data argument not used by format string [-Wformat-extra-args]
+      CALLLOG();
+      ^~~~~~~~~
+  C:\Users\Nathaniel\source\repos\androidcorev2\androidcore\thirdparty-includes\luau\Ast\../../../logs.h(12,36): note: expanded from macro 'CALLLOG'
+  #define CALLLOG( ) LOGD("Calling", __FILE__, __FUNCTION__)
+                          ~~~~~~~~~  ^
+  <scratch space>(327,1): note: expanded from here
+  "rbx\\environment/libraries/identity.cpp"
+  ^
+  C:\Users\Nathaniel\source\repos\androidcorev2\androidcore\thirdparty-includes\luau\Ast\../../../logs.h(7,70): note: expanded from macro 'LOGD'
+  #define LOGD(...) ((void)__android_log_print(ANDROID_LOG_DEBUG, TAG, __VA_ARGS__))
+                                                                       ^~~~~~~~~~~
+  In file included from rbx\environment\environment.cpp:2:
+  In file included from rbx\environment/libraries/../environment.hpp:8:
+  In file included from rbx\environment/libraries/registry.hpp:8:
+rbx\environment/libraries/identity.cpp(58,30): error : expected namespace name
+      using namespace globals::environment;
+                      ~~~~~~~~~^
+rbx\environment/libraries/identity.cpp(61,9): error : use of undeclared identifier 'add_member'
+          add_member(ls, setidentity, "setidentity");
+          ^
+rbx\environment/libraries/identity.cpp(62,9): error : use of undeclared identifier 'add_member'
+          add_member(ls, getidentity, "getidentity");
+          ^
+rbx\environment/libraries/identity.cpp(63,9): error : use of undeclared identifier 'add_member'
+          add_member(ls, elevateidentity, "elevateidentity");
+          ^
+rbx\environment/libraries/identity.cpp(64,9): error : use of undeclared identifier 'add_member'
+          add_member(ls, identifyexecutor, "identifyexecutor");
+          ^
+rbx\environment/libraries/identity.cpp(66,9): error : use of undeclared identifier 'make_alias'
+          make_alias(ls, "identifyexecutor", { "get_executor_name" });
+          ^
+rbx\environment/libraries/identity.cpp(60,5): error : use of undeclared identifier 'make_lib'
+      make_lib(ls, nullptr, [=]() {
+      ^
+  9 warnings and 7 errors generated.

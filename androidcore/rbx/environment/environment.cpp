@@ -1,4 +1,4 @@
-#pragma once
+
 #include "environment.hpp"
 #include "libraries/registry.hpp"
 
@@ -6,7 +6,8 @@
 
 auto globals::environment::c_registry::register_libraries(lua_State* ls) -> void
 {
-    //depend(ls);
+    //register_global_env_functions(ls);
+  //  register_network_functions(ls);
 }
 
 auto globals::environment::make_alias(lua_State* ls, const char* key, std::list< const char* > aliases, bool is_alias_global, bool is_key_global) -> void
