@@ -9,27 +9,6 @@
 #include <lstate.h>
 #include <lualib.h>
 
-auto createthread(lua_State* guardian) -> std::pair< lua_State*, int >
-{
-    CALLLOG();
-
-    const auto old = lua_gettop(guardian);
-
-    int identity;   
-    const auto scid = lua_newthread(guardian);
-    {
-        identity = lua_ref(guardian, -1);
-        scid->gt = luaH_clone(guardian, guardian->gt);
-    }
-    lua_pop(guardian, 1);
-
-	globals::funcs::setidentity(scid, 9);
-
-    lua_settop(guardian, old);
-
-    return { scid, identity };
-}
-
 auto globals::libraries::initiate(std::int64_t scriptcontext) -> void
 {
     CALLLOG();
@@ -52,9 +31,8 @@ auto globals::libraries::initiate(std::int64_t scriptcontext) -> void
         }
     }
 
-    const auto [sandbox, main] = createthread(aL);
-    this->rL = sandbox;
-    this->rL_ref = main;
+    this->rL = lua_newthread(aL);
+   // this->rL_ref = main; UNUSED
 
     luaL_sandboxthread(sandbox);
 
